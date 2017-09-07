@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+#!coding:utf-8
+
+#Cryptographic complexity
+
+import re,tab
+
+while True:
+        name = raw_input("enter your name:").strip()
+        passwd = raw_input("enter your passwd:").strip()
+        p = re.compile("\w")
+        if set(p.findall(passwd)) == set(passwd):
+                print "re-Enter"
+                continue
+        else:
+                print"Set account successful!"
+                break
